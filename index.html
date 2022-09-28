@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Truth Tables Practice</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="truthtables.js"></script>
+    <style type="text/css">
+        select.correct {
+            background-color: #ccffcc;
+        }
+        select.incorrect {
+            background-color: #ffc2b3;
+        } 
+        select.form-control {
+            max-width: 150px; 
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Truth Table Practice</h2>
+            <p>The following question is randomly built from a larger bank. You can get a new question by either refreshing this page or clicking on the New Table button. When you think you're correct, click on the Check button to make sure. </p>
+
+            <div style="margin-bottom:64px;margin-top:32px;">
+                <button id="checkTable" class="btn btn-primary">Check</button>
+                <button onclick="truthtables.reload();" style="margin-left:24px;" class="btn btn-outline-secondary">New Table</button>
+            </div>
+
+            <div id="truthtable" class="table-wrapper"></div>
+            <script>truthtables.init();</script>
+        </div>
+    </body>
+</html>
